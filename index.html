@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white: #ffffff;
+    --ink: #0d0d0d;
+    --ink-mid: #444;
+    --ink-light: #888;
+    --ink-faint: #ccc;
+    --accent: #1a1a2e;
+    --accent-blue: #2255cc;
+    --line: 1px solid #e8e8e8;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --max: 860px;
+    --nav-h: 60px;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    background: var(--white);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: var(--nav-h);
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 300;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 12.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ── LAYOUT ── */
+  main { padding-top: var(--nav-h); }
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 2rem); }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 6rem 0; border-bottom: var(--line); }
+  section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 3rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1; height: 1px; background: var(--ink-faint);
+  }
+
+  /* ── HERO ── */
+  #hero { padding: 7rem 0 6rem; border-bottom: var(--line); }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: end;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--ink-light);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.1s forwards;
+  }
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 8vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    opacity: 0;
+    animation: fadeUp 0.7s 0.25s forwards;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--ink-mid);
+    font-weight: 300;
+  }
+  .hero-desc {
+    margin-top: 1.8rem;
+    font-size: 15px;
+    color: var(--ink-mid);
+    max-width: 480px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.4s forwards;
+  }
+  .hero-ctas {
+    display: flex; gap: 1rem; margin-top: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.55s forwards;
+  }
+  .btn {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .btn:hover { background: var(--ink); color: var(--white); }
+  .btn-ghost { background: transparent; }
+
+  .hero-badge {
+    writing-mode: vertical-lr;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    align-self: flex-start;
+    padding-top: 4px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.6s forwards;
+  }
+
+  /* ── ABOUT / SKILLS ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+  }
+  .about-text p {
+    font-size: 14.5px;
+    color: var(--ink-mid);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+  .skills-col h3 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 1.2rem;
+  }
+  .skill-group { margin-bottom: 2rem; }
+  .skill-group h4 {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--ink-mid);
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 12px;
+    font-family: var(--font-mono);
+    padding: 3px 10px;
+    border: 1px solid var(--ink-faint);
+    color: var(--ink-mid);
+    letter-spacing: 0.04em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .tag:hover { border-color: var(--ink); color: var(--ink); }
+
+  /* ── PROJECTS ── */
+  .projects-list { display: flex; flex-direction: column; gap: 0; }
+  .project-item {
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 2rem 0;
+    border-bottom: var(--line);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+    cursor: pointer;
+  }
+  .project-item:last-child { border-bottom: none; }
+  .project-item:hover .project-title { color: var(--accent-blue); }
+  .project-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--ink-faint);
+    padding-top: 4px;
+    letter-spacing: 0.08em;
+  }
+  .project-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 400;
+    transition: color 0.2s;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+  }
+  .project-desc {
+    font-size: 13.5px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+    max-width: 500px;
+  }
+  .project-meta {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+  }
+  .project-year {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--ink-light);
+    letter-spacing: 0.08em;
+  }
+  .project-tags { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
+  .ptag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 2px 7px;
+    background: #f4f4f4;
+    color: var(--ink-mid);
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── BLOG ── */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5px;
+    background: var(--ink-faint);
+    border: var(--line);
+  }
+  .blog-card {
+    background: var(--white);
+    padding: 1.8rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: background 0.15s;
+    cursor: pointer;
+  }
+  .blog-card:hover { background: #f8f8f8; }
+  .blog-date {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--ink-light);
+    letter-spacing: 0.12em;
+  }
+  .blog-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+  .blog-excerpt {
+    font-size: 13px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+    flex: 1;
+  }
+  .blog-read {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    color: var(--ink-light);
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+
+  /* ── CONTACT ── */
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .contact-heading {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .contact-sub {
+    font-size: 14px;
+    color: var(--ink-mid);
+    line-height: 1.8;
+  }
+  .contact-links { display: flex; flex-direction: column; gap: 0; }
+  .contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 0;
+    border-bottom: var(--line);
+    text-decoration: none;
+    color: var(--ink);
+    transition: padding-left 0.2s;
+    font-size: 14px;
+  }
+  .contact-link:hover { padding-left: 8px; color: var(--accent-blue); }
+  .contact-link:first-child { border-top: var(--line); }
+  .cl-platform {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    width: 80px;
+  }
+  .cl-value { flex: 1; padding-left: 1.5rem; }
+  .cl-arrow { font-size: 18px; color: var(--ink-faint); transition: color 0.2s; }
+  .contact-link:hover .cl-arrow { color: var(--accent-blue); }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
+    border-top: var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-copy {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+  }
+  .footer-made {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-badge { display: none; }
+    .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .project-item { grid-template-columns: 36px 1fr; }
+    .project-meta { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">YourName.dev</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Research</a></li>
+    <li><a href="#blog">Writing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <p class="hero-eyebrow">Researcher · Student · Builder</p>
+        <h1 class="hero-name">
+          Your<br><em>Name</em>
+        </h1>
+        <p class="hero-desc">
+          PhD candidate at [University], studying [Your Field].
+          I work at the intersection of [Topic A] and [Topic B],
+          with a focus on making research meaningful and communicable.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn">View Research</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-badge">Currently @ University Name · 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT & SKILLS -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">About</p>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2>Curious mind,<br><em>rigorous methods.</em></h2>
+        <p>
+          I am a graduate researcher with a passion for [your specific interest].
+          My work bridges academic inquiry and real-world application,
+          driven by the belief that good research should change how we see the world.
+        </p>
+        <p>
+          Previously at [Institution / Lab / Company]. Currently open to
+          research collaborations, internships, and interesting conversations.
+        </p>
+      </div>
+      <div class="skills-col reveal" style="transition-delay:0.15s">
+        <h3>Skills &amp; Tools</h3>
+        <div class="skill-group">
+          <h4>Research</h4>
+          <div class="skill-tags">
+            <span class="tag">Qualitative</span>
+            <span class="tag">Quantitative</span>
+            <span class="tag">Literature Review</span>
+            <span class="tag">Survey Design</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Technical</h4>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">LaTeX</span>
+            <span class="tag">SPSS</span>
+            <span class="tag">Jupyter</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="skill-tags">
+            <span class="tag">中文 (Native)</span>
+            <span class="tag">English (Fluent)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label">Research &amp; Projects</p>
+    <div class="projects-list">
+
+      <div class="project-item reveal">
+        <span class="project-num">01</span>
+        <div>
+          <h3 class="project-title">Your Research Paper Title Here</h3>
+          <p class="project-desc">
+            A brief description of what this research is about, the problem it addresses,
+            and the contribution it makes to the field. Keep it accessible.
+          </p>
+        </div>
+        <div class="project-meta">
+          <span class="project-year">2024</span>
+          <div class="project-tags">
+            <span class="ptag">Published</span>
+            <span class="ptag">ML</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item reveal" style="transition-delay:0.1s">
+        <span class="project-num">02</span>
+        <div>
+          <h3 class="project-title">Another Project or Thesis Chapter</h3>
+          <p class="project-desc">
+            Describe the methodology, key findings, or the open question this project
+            explores. You can link to a PDF, GitHub repo, or paper.
+          </p>
+        </div>
+        <div class="project-meta">
+          <span class="project-year">2023</span>
+          <div class="project-tags">
+            <span class="ptag">In Progress</span>
+            <span class="ptag">HCI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item reveal" style="transition-delay:0.2s">
+        <span class="project-num">03</span>
+        <div>
+          <h3 class="project-title">Open Source Tool / Side Project</h3>
+          <p class="project-desc">
+            Not all work lives in journals. Describe a tool, dataset, or resource
+            you built that others can use. Link to GitHub if available.
+          </p>
+        </div>
+        <div class="project-meta">
+          <span class="project-year">2023</span>
+          <div class="project-tags">
+            <span class="ptag">Open Source</span>
+            <span class="ptag">Python</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="container">
+    <p class="section-label">Writing</p>
+    <div class="blog-grid">
+
+      <div class="blog-card reveal">
+        <span class="blog-date">2025 · June</span>
+        <h3 class="blog-title">What I Learned from a Year of Field Research</h3>
+        <p class="blog-excerpt">
+          Reflections on the gap between what textbooks say and what actually
+          happens when you step outside the lab.
+        </p>
+        <span class="blog-read">Read →</span>
+      </div>
+
+      <div class="blog-card reveal" style="transition-delay:0.1s">
+        <span class="blog-date">2025 · March</span>
+        <h3 class="blog-title">A Beginner's Guide to Writing Your First Literature Review</h3>
+        <p class="blog-excerpt">
+          Practical advice for grad students on how to structure, synthesize,
+          and not lose your mind while reading 200 papers.
+        </p>
+        <span class="blog-read">Read →</span>
+      </div>
+
+      <div class="blog-card reveal" style="transition-delay:0.2s">
+        <span class="blog-date">2024 · November</span>
+        <h3 class="blog-title">The Underrated Power of Good Data Visualization</h3>
+        <p class="blog-excerpt">
+          Why how you show your results matters as much as the results themselves,
+          and tools I use to do it well.
+        </p>
+        <span class="blog-read">Read →</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <div class="contact-inner">
+      <div class="reveal">
+        <h2 class="contact-heading">Let's<br><em>connect.</em></h2>
+        <p class="contact-sub">
+          Open to research collaborations, academic discussion,
+          speaking invitations, and casual coffee chats.
+          Best reached by email.
+        </p>
+      </div>
+      <div class="contact-links reveal" style="transition-delay:0.15s">
+        <a class="contact-link" href="mailto:you@university.edu">
+          <span class="cl-platform">Email</span>
+          <span class="cl-value">you@university.edu</span>
+          <span class="cl-arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://github.com/yourhandle" target="_blank">
+          <span class="cl-platform">GitHub</span>
+          <span class="cl-value">@yourhandle</span>
+          <span class="cl-arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://linkedin.com/in/yourprofile" target="_blank">
+          <span class="cl-platform">LinkedIn</span>
+          <span class="cl-value">Your Name</span>
+          <span class="cl-arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://scholar.google.com" target="_blank">
+          <span class="cl-platform">Scholar</span>
+          <span class="cl-value">Google Scholar Profile</span>
+          <span class="cl-arrow">↗</span>
+        </a>
+        <a class="contact-link" href="/cv.pdf" target="_blank">
+          <span class="cl-platform">CV</span>
+          <span class="cl-value">Download PDF</span>
+          <span class="cl-arrow">↓</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span class="footer-copy">© 2025 Your Name. All rights reserved.</span>
+  <span class="footer-made">Built with GitHub Pages</span>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // Active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? '#0d0d0d' : '';
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
