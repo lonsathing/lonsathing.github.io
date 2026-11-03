@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T00:30:01.074635+00:00",
+  "updated_at": "2026-11-03T00:45:01.901021+00:00",
   "refresh_seconds": 300,
   "jobs": [
     {
@@ -9,17 +9,17 @@
       "partition": "GPU-1A",
       "node": "spcc-a100g02",
       "gpu": "A100",
-      "elapsed": "1-09:36:06",
+      "elapsed": "1-09:51:06",
       "scheduled_start": null,
       "reason": null,
-      "epoch": 169,
+      "epoch": 170,
       "total_epochs": 200,
-      "eta": "2026-11-03T06:39:38.635934+00:00",
-      "loss": 1.093572033687874,
-      "eval_epoch": 160,
-      "recall": 0.6490571003431487,
-      "precision": 0.6467331006798055,
-      "chamfer": 0.009830016131851124
+      "eta": "2026-11-03T06:42:41.675881+00:00",
+      "loss": 1.0987271490803472,
+      "eval_epoch": 170,
+      "recall": 0.6528529926815195,
+      "precision": 0.6461424406664196,
+      "chamfer": 0.009730435808297529
     },
     {
       "id": "917379",
@@ -28,12 +28,12 @@
       "partition": "GPU-LA",
       "node": "spcc-a100g08",
       "gpu": "A100",
-      "elapsed": "2-03:32:53",
+      "elapsed": "2-03:47:53",
       "scheduled_start": null,
       "reason": null,
       "epoch": 145,
       "total_epochs": 200,
-      "eta": "2026-11-03T20:01:47.802210+00:00",
+      "eta": "2026-11-03T20:16:48.628598+00:00",
       "loss": 1.0732130197242453,
       "eval_epoch": 140,
       "recall": 0.6377908918828639,
