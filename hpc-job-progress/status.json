@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T07:15:01.886280+00:00",
+  "updated_at": "2026-11-03T07:30:01.645186+00:00",
   "refresh_seconds": 300,
   "jobs": [
     {
@@ -9,12 +9,12 @@
       "partition": "GPU-LA",
       "node": "spcc-a100g08",
       "gpu": "A100",
-      "elapsed": "2-10:17:53",
+      "elapsed": "2-10:32:53",
       "scheduled_start": null,
       "reason": null,
       "epoch": 164,
       "total_epochs": 200,
-      "eta": "2026-11-03T20:01:35.552104+00:00",
+      "eta": "2026-11-03T20:16:35.311012+00:00",
       "loss": 1.0481109032807527,
       "eval_epoch": 160,
       "recall": 0.6568412102317013,
