@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T06:00:01.535635+00:00",
+  "updated_at": "2026-11-06T06:15:01.211785+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -13,7 +13,7 @@
       "workload_type": "gpu",
       "elapsed": "0:00",
       "scheduled_start": "2026-11-08T03:24:04",
-      "reason": "(Priority)",
+      "reason": "(Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)",
       "epoch": 0,
       "total_epochs": 0,
       "eta": null,
@@ -61,12 +61,12 @@
       "gpu": "A40",
       "cpus": 26,
       "workload_type": "gpu",
-      "elapsed": "1-02:03:57",
+      "elapsed": "1-02:18:57",
       "scheduled_start": null,
       "reason": null,
       "epoch": 101,
       "total_epochs": 200,
-      "eta": "2026-11-07T07:32:49.006716+00:00",
+      "eta": "2026-11-07T07:47:48.682831+00:00",
       "loss": 1.4247597387984947,
       "eval_epoch": 100,
       "recall": 0.625573179743094,
