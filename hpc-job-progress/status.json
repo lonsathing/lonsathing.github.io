@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T13:15:02.007366+00:00",
+  "updated_at": "2026-11-06T13:30:01.769510+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -61,18 +61,18 @@
       "gpu": "A40",
       "cpus": 26,
       "workload_type": "gpu",
-      "elapsed": "1-09:18:58",
+      "elapsed": "1-09:33:57",
       "scheduled_start": null,
       "reason": null,
-      "epoch": 129,
+      "epoch": 130,
       "total_epochs": 200,
-      "eta": "2026-11-07T07:31:35.065295+00:00",
-      "loss": 1.349236006560149,
-      "eval_epoch": 120,
-      "recall": 0.6433278335071009,
-      "precision": 0.6076410467239681,
-      "chamfer": 0.009250160472427531,
-      "progress_current": 129,
+      "eta": "2026-11-07T07:31:00.053870+00:00",
+      "loss": 1.3419995958716782,
+      "eval_epoch": 130,
+      "recall": 0.6596957212701562,
+      "precision": 0.6413241357593411,
+      "chamfer": 0.008804407596300055,
+      "progress_current": 130,
       "progress_total": 200,
       "progress_label": "训练进度",
       "phase": null
@@ -153,8 +153,8 @@
       "phase": null
     },
     {
-      "id": "945497",
-      "name": "rsa4_V4a_s42",
+      "id": "945498",
+      "name": "rsa4_V4b_s42",
       "state": "PENDING",
       "partition": "GPU-S",
       "node": null,
@@ -178,8 +178,8 @@
       "phase": null
     },
     {
-      "id": "945498",
-      "name": "rsa4_V4b_s42",
+      "id": "945497",
+      "name": "rsa4_V4a_s42",
       "state": "PENDING",
       "partition": "GPU-S",
       "node": null,
@@ -187,7 +187,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-08T03:24:04",
+      "scheduled_start": "2026-11-07T13:21:00",
       "reason": "(Priority)",
       "epoch": 0,
       "total_epochs": 0,
