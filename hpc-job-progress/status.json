@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T16:30:01.169254+00:00",
+  "updated_at": "2026-11-11T16:45:01.381998+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -62,7 +62,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-13T03:08:23",
+      "scheduled_start": "2026-11-12T07:33:00",
       "reason": "(Priority)",
       "epoch": 0,
       "total_epochs": 0,
@@ -74,31 +74,6 @@
       "chamfer": null,
       "progress_current": 0,
       "progress_total": 0,
-      "progress_label": "训练进度",
-      "phase": null
-    },
-    {
-      "id": "984139",
-      "name": "rsa5h_H1_s1337",
-      "state": "RUNNING",
-      "partition": "GPU-1A",
-      "node": "spcc-a100g04",
-      "gpu": "A100",
-      "cpus": 26,
-      "workload_type": "gpu",
-      "elapsed": "8:40:12",
-      "scheduled_start": null,
-      "reason": null,
-      "epoch": 39,
-      "total_epochs": 40,
-      "eta": "2026-11-11T16:43:02.135802+00:00",
-      "loss": 1.369538627134429,
-      "eval_epoch": 30,
-      "recall": 0.5902905645125073,
-      "precision": 0.5535947437139367,
-      "chamfer": 0.009181662972165647,
-      "progress_current": 39,
-      "progress_total": 40,
       "progress_label": "训练进度",
       "phase": null
     },
