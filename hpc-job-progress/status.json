@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T19:45:01.553500+00:00",
+  "updated_at": "2026-11-11T20:00:01.338756+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -62,7 +62,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-12T14:13:00",
+      "scheduled_start": "2026-11-12T20:14:02",
       "reason": "(Priority)",
       "epoch": 0,
       "total_epochs": 0,
