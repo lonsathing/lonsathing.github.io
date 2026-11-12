@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T00:30:01.060956+00:00",
+  "updated_at": "2026-11-12T00:45:01.917858+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -36,12 +36,12 @@
       "gpu": "A40",
       "cpus": 26,
       "workload_type": "gpu",
-      "elapsed": "25:07",
+      "elapsed": "40:07",
       "scheduled_start": null,
       "reason": null,
       "epoch": 1,
       "total_epochs": 40,
-      "eta": "2026-11-12T13:41:11.860772+00:00",
+      "eta": "2026-11-12T13:56:12.717711+00:00",
       "loss": 1.964650082786878,
       "eval_epoch": null,
       "recall": null,
