@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T06:15:01.218367+00:00",
+  "updated_at": "2026-11-12T06:30:01.889784+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -28,8 +28,8 @@
       "phase": null
     },
     {
-      "id": "994850",
-      "name": "rsa5h_H3_cam_s2024",
+      "id": "996017",
+      "name": "rsa5h_H3_cam_occ_s2024",
       "state": "PENDING",
       "partition": "GPU-1",
       "node": null,
@@ -61,18 +61,18 @@
       "gpu": "A40",
       "cpus": 26,
       "workload_type": "gpu",
-      "elapsed": "6:10:07",
+      "elapsed": "6:25:07",
       "scheduled_start": null,
       "reason": null,
-      "epoch": 19,
+      "epoch": 20,
       "total_epochs": 40,
-      "eta": "2026-11-12T12:56:55.625500+00:00",
-      "loss": 1.543337938785553,
-      "eval_epoch": 10,
-      "recall": 0.530852831544438,
-      "precision": 0.5296990880777934,
-      "chamfer": 0.010470166644917109,
-      "progress_current": 19,
+      "eta": "2026-11-12T12:52:25.887257+00:00",
+      "loss": 1.524976529677709,
+      "eval_epoch": 20,
+      "recall": 0.5648717833565365,
+      "precision": 0.5247611498185156,
+      "chamfer": 0.009853953758121684,
+      "progress_current": 20,
       "progress_total": 40,
       "progress_label": "训练进度",
       "phase": null
@@ -103,8 +103,8 @@
       "phase": null
     },
     {
-      "id": "994848",
-      "name": "rsa5h_H3_cam_s42",
+      "id": "996015",
+      "name": "rsa5h_H3_cam_occ_s42",
       "state": "PENDING",
       "partition": "GPU-1A",
       "node": null,
@@ -153,8 +153,8 @@
       "phase": null
     },
     {
-      "id": "994849",
-      "name": "rsa5h_H3_cam_s1337",
+      "id": "996016",
+      "name": "rsa5h_H3_cam_occ_s1337",
       "state": "PENDING",
       "partition": "GPU-S",
       "node": null,
@@ -186,12 +186,12 @@
       "gpu": "A40",
       "cpus": 26,
       "workload_type": "gpu",
-      "elapsed": "4:35:04",
+      "elapsed": "4:50:04",
       "scheduled_start": null,
       "reason": null,
       "epoch": 14,
       "total_epochs": 40,
-      "eta": "2026-11-12T14:42:49.318344+00:00",
+      "eta": "2026-11-12T14:57:49.989770+00:00",
       "loss": 1.583157888452212,
       "eval_epoch": 10,
       "recall": 0.5465711591143845,
