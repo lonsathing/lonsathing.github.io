@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T16:00:01.518152+00:00",
+  "updated_at": "2026-11-14T16:15:01.273817+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -30,6 +30,31 @@
     {
       "id": "1003228",
       "name": "life1_L1_s42",
+      "state": "PENDING",
+      "partition": "GPU-1",
+      "node": null,
+      "gpu": null,
+      "cpus": 26,
+      "workload_type": "gpu",
+      "elapsed": "0:00",
+      "scheduled_start": "2026-11-16T01:23:38",
+      "reason": "(Priority)",
+      "epoch": 0,
+      "total_epochs": 0,
+      "eta": null,
+      "loss": null,
+      "eval_epoch": null,
+      "recall": null,
+      "precision": null,
+      "chamfer": null,
+      "progress_current": 0,
+      "progress_total": 0,
+      "progress_label": "训练进度",
+      "phase": null
+    },
+    {
+      "id": "1010061",
+      "name": "trees_frac_sweep",
       "state": "PENDING",
       "partition": "GPU-1",
       "node": null,
