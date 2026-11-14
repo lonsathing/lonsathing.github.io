@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T08:45:01.241014+00:00",
+  "updated_at": "2026-11-14T09:00:01.894821+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -112,7 +112,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-15T18:04:00",
+      "scheduled_start": "2026-11-15T17:58:47",
       "reason": "(Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)",
       "epoch": 0,
       "total_epochs": 0,
