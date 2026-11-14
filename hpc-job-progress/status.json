@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T06:15:01.255263+00:00",
+  "updated_at": "2026-11-14T06:30:01.848177+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -12,7 +12,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-15T15:14:19",
+      "scheduled_start": "2026-11-15T18:04:00",
       "reason": "(Priority)",
       "epoch": 0,
       "total_epochs": 0,
@@ -37,7 +37,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-15T15:14:19",
+      "scheduled_start": "2026-11-15T18:04:00",
       "reason": "(Priority)",
       "epoch": 0,
       "total_epochs": 0,
@@ -112,7 +112,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-15T15:14:19",
+      "scheduled_start": "2026-11-15T18:04:00",
       "reason": "(Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)",
       "epoch": 0,
       "total_epochs": 0,
@@ -137,7 +137,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-15T15:14:19",
+      "scheduled_start": "2026-11-15T18:04:00",
       "reason": "(Priority)",
       "epoch": 0,
       "total_epochs": 0,
