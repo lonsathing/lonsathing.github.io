@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T15:15:01.841863+00:00",
+  "updated_at": "2026-11-17T15:30:01.796404+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -12,8 +12,8 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-18T03:59:04",
-      "reason": "(Priority)",
+      "scheduled_start": "2026-11-18T03:25:10",
+      "reason": "(Resources)",
       "epoch": 0,
       "total_epochs": 0,
       "eta": null,
@@ -24,31 +24,6 @@
       "chamfer": null,
       "progress_current": 0,
       "progress_total": 0,
-      "progress_label": "训练进度",
-      "phase": null
-    },
-    {
-      "id": "1014414",
-      "name": "frag_O2p_ptr_s1337",
-      "state": "RUNNING",
-      "partition": "GPU-1",
-      "node": "spcc-a40g06",
-      "gpu": "A40",
-      "cpus": 26,
-      "workload_type": "gpu",
-      "elapsed": "7:37:20",
-      "scheduled_start": null,
-      "reason": null,
-      "epoch": 19,
-      "total_epochs": 20,
-      "eta": "2026-11-17T15:38:01.562893+00:00",
-      "loss": 1.8955636662244797,
-      "eval_epoch": 10,
-      "recall": 0.5456056047065164,
-      "precision": 0.5196210517311435,
-      "chamfer": 0.010145573186679078,
-      "progress_current": 19,
-      "progress_total": 20,
       "progress_label": "训练进度",
       "phase": null
     }
