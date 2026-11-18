@@ -1,31 +1,5 @@
 {
-  "updated_at": "2026-11-18T08:00:01.821801+00:00",
+  "updated_at": "2026-11-18T08:15:01.619767+00:00",
   "refresh_seconds": 900,
-  "jobs": [
-    {
-      "id": "1015198",
-      "name": "frag_O3_root_s1337",
-      "state": "RUNNING",
-      "partition": "GPU-1",
-      "node": "spcc-a40g17",
-      "gpu": "A40",
-      "cpus": 26,
-      "workload_type": "gpu",
-      "elapsed": "16:08:00",
-      "scheduled_start": null,
-      "reason": null,
-      "epoch": 20,
-      "total_epochs": 20,
-      "eta": null,
-      "loss": 1.6981208770804934,
-      "eval_epoch": 20,
-      "recall": 0.5243634077334172,
-      "precision": 0.37765630559239255,
-      "chamfer": 0.01137167843444718,
-      "progress_current": 20,
-      "progress_total": 20,
-      "progress_label": "训练进度",
-      "phase": null
-    }
-  ]
+  "jobs": []
 }
