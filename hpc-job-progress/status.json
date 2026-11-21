@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21T13:15:01.793273+00:00",
+  "updated_at": "2026-11-21T13:30:01.369698+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -86,18 +86,18 @@
       "gpu": "A100",
       "cpus": 26,
       "workload_type": "gpu",
-      "elapsed": "23:31:29",
+      "elapsed": "23:46:29",
       "scheduled_start": null,
       "reason": null,
-      "epoch": 127,
+      "epoch": 129,
       "total_epochs": 200,
-      "eta": "2026-11-22T02:41:41.942727+00:00",
-      "loss": 1.3989024412190472,
+      "eta": "2026-11-22T02:34:21.655626+00:00",
+      "loss": 1.390793883977113,
       "eval_epoch": 120,
       "recall": 0.6390460669494185,
       "precision": 0.6120644523297074,
       "chamfer": 0.009313806636395722,
-      "progress_current": 127,
+      "progress_current": 129,
       "progress_total": 200,
       "progress_label": "训练进度",
       "phase": null
