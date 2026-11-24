@@ -1,5 +1,56 @@
 {
-  "updated_at": "2026-11-24T07:00:01.175707+00:00",
+  "updated_at": "2026-11-24T07:15:01.253310+00:00",
   "refresh_seconds": 900,
-  "jobs": []
+  "jobs": [
+    {
+      "id": "1075366",
+      "name": "life2_L2_s2024",
+      "state": "PENDING",
+      "partition": "GPU-1A",
+      "node": null,
+      "gpu": null,
+      "cpus": 26,
+      "workload_type": "gpu",
+      "elapsed": "0:00",
+      "scheduled_start": "2026-11-25T17:30:22",
+      "reason": "(Priority)",
+      "epoch": 0,
+      "total_epochs": 40,
+      "eta": null,
+      "loss": null,
+      "eval_epoch": null,
+      "recall": null,
+      "precision": null,
+      "chamfer": null,
+      "progress_current": 0,
+      "progress_total": 40,
+      "progress_label": "训练进度",
+      "phase": null
+    },
+    {
+      "id": "1075365",
+      "name": "life2_L2_s42",
+      "state": "PENDING",
+      "partition": "GPU-S",
+      "node": null,
+      "gpu": null,
+      "cpus": 26,
+      "workload_type": "gpu",
+      "elapsed": "0:00",
+      "scheduled_start": null,
+      "reason": "(QOSGrpJobsLimit)",
+      "epoch": 5,
+      "total_epochs": 40,
+      "eta": "2026-11-25T16:53:36.653287+00:00",
+      "loss": 2.6739244922995566,
+      "eval_epoch": null,
+      "recall": null,
+      "precision": null,
+      "chamfer": null,
+      "progress_current": 5,
+      "progress_total": 40,
+      "progress_label": "训练进度",
+      "phase": null
+    }
+  ]
 }
