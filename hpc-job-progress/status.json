@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T13:30:01.140066+00:00",
+  "updated_at": "2026-11-24T13:45:01.852632+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -41,7 +41,7 @@
       "reason": "(QOSGrpJobsLimit)",
       "epoch": 5,
       "total_epochs": 40,
-      "eta": "2026-11-25T23:08:36.540043+00:00",
+      "eta": "2026-11-25T23:23:37.252611+00:00",
       "loss": 2.6739244922995566,
       "eval_epoch": null,
       "recall": null,
