@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T12:30:01.794368+00:00",
+  "updated_at": "2026-11-24T12:45:01.582384+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -12,7 +12,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-26T11:38:02",
+      "scheduled_start": "2026-11-26T10:56:46",
       "reason": "(Priority)",
       "epoch": 0,
       "total_epochs": 40,
@@ -41,7 +41,7 @@
       "reason": "(QOSGrpJobsLimit)",
       "epoch": 5,
       "total_epochs": 40,
-      "eta": "2026-11-25T22:08:37.194346+00:00",
+      "eta": "2026-11-25T22:23:36.982362+00:00",
       "loss": 2.6739244922995566,
       "eval_epoch": null,
       "recall": null,
