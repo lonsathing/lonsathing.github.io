@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T09:30:01.737079+00:00",
+  "updated_at": "2026-11-26T09:45:01.619240+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -12,7 +12,7 @@
       "cpus": 26,
       "workload_type": "gpu",
       "elapsed": "0:00",
-      "scheduled_start": "2026-11-27T21:34:31",
+      "scheduled_start": "2026-11-27T00:17:30",
       "reason": "(Resources)",
       "epoch": 0,
       "total_epochs": 40,
@@ -41,7 +41,7 @@
       "reason": "(Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)",
       "epoch": 5,
       "total_epochs": 40,
-      "eta": "2026-11-27T19:08:37.137054+00:00",
+      "eta": "2026-11-27T19:23:37.019218+00:00",
       "loss": 2.6739244922995566,
       "eval_epoch": null,
       "recall": null,
