@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T10:00:01.576034+00:00",
+  "updated_at": "2026-11-26T10:15:01.614553+00:00",
   "refresh_seconds": 900,
   "jobs": [
     {
@@ -30,18 +30,18 @@
     {
       "id": "1075365",
       "name": "life2_L2_s42",
-      "state": "PENDING",
+      "state": "RUNNING",
       "partition": "GPU-S",
-      "node": null,
-      "gpu": null,
+      "node": "spcc-a40g18",
+      "gpu": "A40",
       "cpus": 26,
       "workload_type": "gpu",
-      "elapsed": "0:00",
-      "scheduled_start": "2026-11-26T20:13:17",
-      "reason": "(Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)",
+      "elapsed": "2:07",
+      "scheduled_start": null,
+      "reason": null,
       "epoch": 5,
       "total_epochs": 40,
-      "eta": "2026-11-27T19:38:36.976013+00:00",
+      "eta": "2026-11-27T19:53:37.014529+00:00",
       "loss": 2.6739244922995566,
       "eval_epoch": null,
       "recall": null,
